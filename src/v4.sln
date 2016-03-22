@@ -50,6 +50,8 @@ Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "Logary.Adapters.Hawk", "ada
 EndProject
 Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "Logary.Adapters.Suave", "adapters\Logary.Adapters.Suave\Logary.Adapters.Suave.fsproj", "{5255B5AD-9DA9-495C-8B6D-740BB6DC164B}"
 EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "Logary.Obnoxious", "Logary.Obnoxious\Logary.Obnoxious.fsproj", "{AFBFB150-41F3-44F7-A9D9-7A5BB86AC765}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,6 +98,10 @@ Global
 		{9AF9D1E1-33A4-42C7-825F-D41CD3ECEBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AF9D1E1-33A4-42C7-825F-D41CD3ECEBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AF9D1E1-33A4-42C7-825F-D41CD3ECEBDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFBFB150-41F3-44F7-A9D9-7A5BB86AC765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFBFB150-41F3-44F7-A9D9-7A5BB86AC765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFBFB150-41F3-44F7-A9D9-7A5BB86AC765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFBFB150-41F3-44F7-A9D9-7A5BB86AC765}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC4A5F70-0785-40D6-9EBE-4BB0E47A9EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC4A5F70-0785-40D6-9EBE-4BB0E47A9EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC4A5F70-0785-40D6-9EBE-4BB0E47A9EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU

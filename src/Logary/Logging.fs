@@ -38,10 +38,11 @@ let getCurrentLoggerName () =
 [<CompiledName "GetLoggerByPointName">]
 let getLoggerByPointName name =
   if box name = null then nullArg "name"
-  match !Globals.singleton with
+  use ctx = Globals.GlobalContext.create()
+  match ctx.singleton with
   | None ->
     let logger = Flyweight name :> FlyweightLogger
-    Globals.addFlyweight logger
+    Globals.addFlyweight ctx logger
     logger :> Logger
 
   | Some inst ->

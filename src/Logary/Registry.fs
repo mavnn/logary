@@ -64,18 +64,20 @@ module internal Logging =
 
   /// Singleton configuration entry point: call from the runLogary code.
   let startFlyweights inst : Job<unit> =
+    use ctx = Globals.GlobalContext.create ()
     // Iterate through all flywieghts and set the current LogManager for them
-    Globals.withFlyweights <| fun flyweights ->
+    Globals.withFlyweights ctx <| fun flyweights ->
       flyweights
       |> List.traverseJobA (fun f -> f.configured inst)
       >>- fun (_ : unit list) ->
-        Globals.singleton := Some inst
-        Globals.clearFlywieghts ()
+        Globals.setSingleton ctx inst
+        Globals.clearFlyweights ctx
 
   /// Singleton configuration exit point: call from shutdownLogary code
   let shutdownFlyweights () =
-    Globals.singleton := None
-    Globals.clearFlywieghts ()
+    use ctx = Globals.GlobalContext.create ()
+    Globals.clearSingleton ctx
+    Globals.clearFlyweights ctx
 
 module Advanced =
   open System
